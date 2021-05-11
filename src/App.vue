@@ -2,17 +2,20 @@
   <div id="app">
     <NavBar :title="title"/>
     <Home/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Home from "./views/Home";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 export default {
   components: {
     Home,
-    NavBar
+    NavBar,
+    Footer
   },
   data() {
     return {
@@ -34,6 +37,8 @@ body {
 
 #app {
   font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 </style>

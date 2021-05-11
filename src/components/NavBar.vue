@@ -19,13 +19,16 @@ export default {
 
 <style scoped lang="scss">
 .nav {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  padding: 10px 0;
+  background: $star-command-blue;
   &__title {
-    font-size: 2em;
-    background: $star-command-blue;
+    margin-left: 30px;
     color: white;
-    padding: 10px 0;
     text-align: center;
-    width: 100vw;
+    box-sizing: border-box;
   }
 }
 </style>

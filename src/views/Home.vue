@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <main class="home">
     <CurrencyRates/>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -20,6 +20,12 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 90vh;
+  height: 95vh;
+}
+
+#search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 </style>

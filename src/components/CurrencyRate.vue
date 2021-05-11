@@ -2,9 +2,9 @@
   <div class="currency-rate">
     <div class="currency-rate__codes">{{base.toUpperCase()}} TO {{currency.toUpperCase()}}</div>
     <div class="currency-rate__card">
-      <span class="currency-rate-from">1 <currency-icon :currency="base"/></span>
+      <span class="currency-rate-from">{{ amount }} <currency-icon :currency="base"/></span>
       <font-awesome-icon icon="arrow-right" class="icon icon-arrow"/>
-      <span class="currency-rate-to">{{rate}} <currency-icon :currency="currency"/></span>
+      <span class="currency-rate-to">{{ (amount * rate).toFixed(2) }} <currency-icon :currency="currency"/></span>
     </div>
   </div>
 </template>
@@ -14,7 +14,7 @@ import CurrencyIcon from "./CurrencyIcon";
 
 export default {
   name: "CurrencyRate",
-  props: ["rate", "currency", "base"],
+  props: ["rate", "currency", "base", "amount"],
   components: {
     CurrencyIcon
   }
@@ -23,8 +23,10 @@ export default {
 
 <style scoped lang="scss">
 .currency-rate {
+  text-align: center;
+  max-width: 500px;
+
   &__codes {
-    text-align: center;
     font-size: .75rem;
     margin: 5px;
   }
@@ -32,6 +34,7 @@ export default {
   &__card {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
 
     padding: 10px;
@@ -40,6 +43,7 @@ export default {
     border-radius: 2px;
 
     transition: 0.3s;
+
     &:hover {
       transform: scale(1.02);
       color: $star-command-blue;
