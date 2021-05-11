@@ -1,7 +1,7 @@
 <template>
   <nav class="nav">
     <div class="nav__title">
-      {{title}}
+      {{ title }}
     </div>
   </nav>
 </template>

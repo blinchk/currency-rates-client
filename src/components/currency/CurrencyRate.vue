@@ -24,6 +24,7 @@ export default {
 <style scoped lang="scss">
 .currency-rate {
   text-align: center;
+  min-width: 300px;
   max-width: 500px;
 
   &__codes {

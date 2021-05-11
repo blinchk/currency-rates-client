@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import CurrencyRates from "../components/CurrencyRates";
+import CurrencyRates from "../components/currency/CurrencyRates";
 
 export default {
   name: 'Home',

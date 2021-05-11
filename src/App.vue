@@ -8,14 +8,14 @@
 
 <script>
 import Home from "./views/Home";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+import NavBar from "./components/layout/NavBar";
+import Footer from "./components/layout/Footer";
 
 export default {
   components: {
     Home,
     NavBar,
-    Footer
+    Footer,
   },
   data() {
     return {
